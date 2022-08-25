@@ -33,6 +33,8 @@ const Header = styled.div`
 display: flexbox;
 border-bottom: 5px solid #E36B54;
 padding: 2px;
+position: sticky;
+top: 0;
 `
 
 const Title = styled.div`
@@ -42,8 +44,7 @@ font-size: 32px;
 margin-left: 15px;
 margin-right: 15px;
 margin-top: 5px;
-position: sticky;
-top: 0;
+display: inline-block;
     &:hover{
         color: #FD935E;
         cursor: pointer;

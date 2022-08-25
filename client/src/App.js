@@ -4,6 +4,7 @@ import {Helmet} from "react-helmet";
 import Navbar from "./Components/Navbar";
 import Name from "./Components/Name";
 import AboutMe from "./Components/AboutMe";
+import Contact from "./Components/Contact";
 
 const App = () => {
   
@@ -36,7 +37,7 @@ const App = () => {
       </section>
       <section className="sec-5">
         <div className="container">
-          <div>Contact</div>
+          <Contact />
         </div>
       </section>
   </div>
