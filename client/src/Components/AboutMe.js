@@ -12,14 +12,18 @@ const AboutMe = () => {
 }
 
 const Wrapper = styled.div`
-font-family: "Montserrat";
-color: white;
-font-size: 24px;
-position: relative;
 
 `
 
 const Title = styled.div`
+color: white;
+font-family: "Montserrat", sans-serif;
+font-size: 35px;
+font-weight: bold;
+margin-bottom: 5px;
+position: relative;
+border-bottom: 2px solid white;
+
 
 
 `

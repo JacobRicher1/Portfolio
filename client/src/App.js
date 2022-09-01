@@ -5,37 +5,39 @@ import Navbar from "./Components/Navbar";
 import Name from "./Components/Name";
 import AboutMe from "./Components/AboutMe";
 import Contact from "./Components/Contact";
+import Skills from "./Components/Skills";
+import Projects from "./Components/Projects";
+import { useRef } from "react"
 
-const App = () => {
-  
+const App = () => { 
 
   return (
     <div>
       <Helmet>
-        <style>{'body { background-color: #2F1633 }'}</style>
+        <style>{'body { background-color: #261E17 }'}</style>
       </Helmet>
       <Navbar />
-      <section className="sec-1">
+      <section className="Name">
         <div className="container">
           <Name />
         </div>
       </section>
-      <section className="sec-2">
+      <section className="AboutMe">
         <div className="container">
           <AboutMe />
         </div>
       </section>
-      <section className="sec-3">
+      <section className="Skills">
         <div className="container">
-          <div>Skills</div>
+          <Skills />
         </div>
       </section>
-      <section className="sec-4">
+      <section className="Projects" >
         <div className="container">
-          <div>Projects</div>
+          <Projects />
         </div>
       </section>
-      <section className="sec-5">
+      <section className="Contact">
         <div className="container">
           <Contact />
         </div>

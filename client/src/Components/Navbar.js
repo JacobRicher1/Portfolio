@@ -1,29 +1,21 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components'  
 
 
 
 const Navbar = () => {
-
-
 return (
     <Header>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"></link>
-        <a href='#sec-1'>
+        <div>
+        <div>
             <Title>Home</Title>
-        </a>
-        <a href='#sec-2'>
-            <Title>About</Title>
-        </a>
-        <a href='#sec-3'>
+            <Title>About Me</Title>
             <Title>Skills</Title>
-        </a>
-        <a href='#sec-4'>
             <Title>Projects</Title>
-        </a>
-        <a href='#sec-5'>
             <Title>Contact</Title>
-        </a>
+        </div>
+        </div>
     </Header>
 )
 }
@@ -31,22 +23,23 @@ return (
 
 const Header = styled.div`
 display: flexbox;
-border-bottom: 5px solid #E36B54;
 padding: 2px;
 position: sticky;
 top: 0;
+z-index: 1;
 `
 
 const Title = styled.div`
-color: #E36B54;
+color: #F2DCC2;
+font-weight: bold;
 font-family: "Montserrat", sans-serif;
-font-size: 32px;
+padding: 5px;
+font-size: 22px;
 margin-left: 15px;
-margin-right: 15px;
 margin-top: 5px;
 display: inline-block;
     &:hover{
-        color: #FD935E;
+        color: #D9BEA7;
         cursor: pointer;
     }
 
