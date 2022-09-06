@@ -1,10 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import { motion, useTransform, useScroll } from "framer-motion"
+import "./AboutMe.css"
 
 const AboutMe = () => {
+    const { scrollYProgress } = useScroll();
+
     return (
     <Wrapper>
-    <Title>About Me</Title>
+    <motion.div 
+    className='Title'
+    style={{
+        opacity: scrollYProgress
+    }}>About Me</motion.div>
     <Discription>Hey! I'm Jacob, building and creating have always been a passion of mine.{`\n`}
     So when I discovered the ability to create on the internet I immediately fell in love. I started coding in early 2019 and finished a coding bootcamp in the summer of 2022</Discription>
     </Wrapper>
@@ -15,18 +23,6 @@ const Wrapper = styled.div`
 
 `
 
-const Title = styled.div`
-color: white;
-font-family: "Montserrat", sans-serif;
-font-size: 35px;
-font-weight: bold;
-margin-bottom: 5px;
-position: relative;
-border-bottom: 2px solid white;
-
-
-
-`
 
 const Discription = styled.p`
 font-family: "Montserrat";

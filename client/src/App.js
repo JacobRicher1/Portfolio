@@ -7,12 +7,16 @@ import AboutMe from "./Components/AboutMe";
 import Contact from "./Components/Contact";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
+import Footer from "./Components/Footer";
 import { useRef } from "react"
+import { BrowserRouter as Router } from "react-router-dom";
+
 
 const App = () => { 
 
   return (
-    <div>
+    <Router>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"></link>
       <Helmet>
         <style>{'body { background-color: #261E17 }'}</style>
       </Helmet>
@@ -40,9 +44,12 @@ const App = () => {
       <section className="Contact">
         <div className="container">
           <Contact />
+          <Footer />
         </div>
       </section>
-  </div>
+
+      
+  </Router>
 
   )
 }

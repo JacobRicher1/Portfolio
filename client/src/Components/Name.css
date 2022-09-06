@@ -1,0 +1,40 @@
+.viewAbout{
+    background-color: #261E17;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Montserrat";
+    position: relative;
+    top: 100px;
+    
+}
+button:hover {
+    background-color: blue;
+}
+button .down {
+    display: none;
+}
+button:hover .right {
+    display: none;
+}
+button:hover .down {
+    display: inline;
+}
+
+.fullName{
+    font-family: "Montserrat";
+    color: #F2DCC2;
+    font-size: 35px;
+    font-weight: 337;
+    position: relative;
+    right: 400px;
+    width: fit-content;
+    bottom: 150px;
+    transition: width 2s;
+
+}
