@@ -17,36 +17,66 @@ const Contact = () => {
         e.target.reset()
     }
     return (
-    <>
-    <ContactTitle>Contact Me</ContactTitle>
-    <Wrapper>
-        <form onSubmit={sendEmail}>
-            <NameSection>
-                <NameTitle>NAME</NameTitle>
-                <NameInput type="text" className='form-control' name='name' />
-            </NameSection>
-            <EmailSection>
-                <EmailTitle>EMAIL</EmailTitle>
-                <EmailInput type="text" className='form-control' name='email' />
-            </EmailSection>
-            <MessageSection>
-                <MessageTitle>MESSAGE</MessageTitle>
-                <MessageInput type="text" className='form-control' name='message' />
-            </MessageSection>
-            <Button type="submit" value="send message">
-
-            </Button>
-
-
-
-
-        </form>
-    </Wrapper>
-    </>
+        <ContactContainer id='contact'>
+            <ContactWrapper>
+                <ContactTitle>Contact
+                </ContactTitle>
+                <form onSubmit={sendEmail}>
+                    <NameSection>
+                        
+                        <NameInput type="text" className='form-control' name='name' placeholder='Name' />
+                    </NameSection>
+                    <EmailSection>
+                        
+                        <EmailInput type="text" className='form-control' name='email' placeholder='Email' />
+                    </EmailSection>
+                    <MessageSection>
+                    
+                        <MessageInput type="text" className='form-control' name='message' placeholder='Message'/>
+                    </MessageSection>
+                    <Button type="submit" value="send message">
+                    </Button>
+            </form>
+        </ContactWrapper>
+    </ContactContainer>
     )
 }
 
+const ContactTitle = styled.div`
+    color: #01bf71;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-content: center;
+    position: relative;
+    top: 72px;
+    left: 100px;
 
+`
+
+const ContactContainer = styled.div`
+    color: #fff;
+    background: '#2f2f2f';
+
+    @media screen and (max-width: 768px) {
+        padding: 100px 0;
+    }
+`
+const ContactWrapper = styled.div`
+display: grid;
+    z-index: 1;
+    height: 500px;
+    width: 100%;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 24px;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f2f2f;
+`
 const EmailSection = styled.div`
 margin: 12px;
 `
@@ -59,36 +89,6 @@ const MessageSection = styled.div`
 margin: 12px;
 `
 
-const MessageTitle = styled.div`
-color: white;
-font-family: "Montserrat", sans-serif;
-font-size: 20px;
-font-weight: bold;
-margin-bottom: 5px;
-`
-const EmailTitle = styled.div`
-color: white;
-font-family: "Montserrat", sans-serif;
-font-size: 20px;
-font-weight: bold;
-margin-bottom: 5px;
-`
-const NameTitle = styled.div`
-color: white;
-font-family: "Montserrat", sans-serif;
-font-size: 20px;
-font-weight: bold;
-margin-bottom: 5px;
-`
-const ContactTitle = styled.div`
-position: relative;
-right: 400px;
-color: #f64c72;
-font-family: "Montserrat", sans-serif;
-font-size: 40px;
-font-weight: bold;
-`
-
 const Wrapper = styled.div`
 width: fit-content;
 position: relative;
@@ -96,43 +96,51 @@ left: 250px;
 `
 
 const NameInput = styled.input`
-width: 550px;
+width: 400px;
 height: 38px;
-border-radius: 5px;
+
 border-style: solid;
-padding-left: 4px;
+padding-left: 8px;
+background-color: #222222;
+color: white;
 `
 const EmailInput = styled.input`
-width: 550px;
+width: 400px;
 height: 38px;
-border-radius: 5px;
+
 border-style: solid;
-padding-left: 4px;
+padding-left: 8px;
+background-color: #222222;
+color: white;
 `
 const MessageInput = styled.input`
-width: 550px;
+width: 400px;
 height: 100px;
-border-radius: 5px;
+
 border-style: solid;
+padding-bottom: 60px;
+padding-left: 8px;
+background-color: #222222;
+color: white;
 `
 
 const Button = styled.input`
 
     width: 150px;
-    height: 60px;
-    border: none;
+    height: 55px;
+    border-color: white;
+    color: white;
     outline: none;
     background: #2f2f2f;
     color: #fff;
-    font-size: 18px;
-    border-radius: 40px;
+    font-size: 15px;
     text-align: center;
     box-shadow: 0 6px 20px -5px
     rgba(0,0,0,0.4);
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    left: 10px;
+    left: 260px;
 `
 
 
